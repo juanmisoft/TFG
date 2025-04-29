@@ -1,0 +1,160 @@
+.user-management-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  color: #555;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.user-management-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-management-container input,
+.user-management-container select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-management-container button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-management-container button:hover {
+  background-color: #45a049;
+}
+
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-wrapper label {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-input-wrapper label:hover {
+  background-color: #1976d2;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.users-list h3 {
+  color: #555;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+
+}
+
+.users-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.users-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.users-list li:last-child {
+  border-bottom: none;
+}
+
+.users-list li span {
+  flex-grow: 1;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.back-btn {
+  background-color: #2196f3;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #1976d2;
+}

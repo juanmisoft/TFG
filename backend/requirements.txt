@@ -1,0 +1,8 @@
+django
+djangorestframework
+mysqlclient
+django-cors-headers
+djangorestframework-simplejwt
+Pillow==10.3.0
+python-dateutil
+whitenoise==6.7.0

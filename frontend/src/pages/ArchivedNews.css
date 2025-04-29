@@ -1,0 +1,95 @@
+/* Reutilizamos estilos base de Home.css */
+.archived-news-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header, navbar, y user-profile ya están definidos en Home.css y se reutilizan */
+
+/* Breadcrumbs ya está definido en Home.css y se reutiliza */
+
+.archived-news-container .main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.module {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.module h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.news-month {
+  margin-bottom: 20px;
+}
+
+.news-month h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.archived-news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.news-item strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.news-item br + span.created-by {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.no-news {
+  font-style: italic;
+  color: #4caf50;
+}
+
+.loading {
+  font-style: italic;
+  color: #666;
+}
+
+.back-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,22 @@
+
+# Para Django (backend)
+*.pyc
+__pycache__/
+env/
+.venv/
+*.sqlite3
+db.sqlite3
+/media/
+*.log
+
+# Para macOS
+.DS_Store
+
+# Para React (frontend)
+node_modules/
+dist/
+build/
+
+# Entornos de desarrollo
+.idea/
+.vscode/

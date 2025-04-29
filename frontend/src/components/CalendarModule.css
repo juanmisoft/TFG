@@ -1,0 +1,84 @@
+.calendar-module {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-module h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Aumentamos especificidad para el calendario */
+.calendar-module .rbc-calendar {
+  font-family: Arial, sans-serif;
+}
+
+/* Botones de navegación */
+.calendar-module .rbc-toolbar .rbc-btn-group button {
+  padding: 5px 10px;
+  background-color: #e9ecef !important; /* Gris claro */
+  border: 1px solid #ddd !important;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #333 !important; /* Texto gris oscuro */
+  transition: background-color 0.2s;
+}
+
+.calendar-module .rbc-toolbar .rbc-btn-group button:hover {
+  background-color: #dee2e6 !important; /* Gris más oscuro al hover */
+}
+
+.calendar-module .rbc-toolbar .rbc-btn-group button.rbc-active {
+  background-color: #007bff !important; /* Azul para vista activa */
+  color: white !important;
+}
+
+/* Días del calendario */
+.calendar-module .rbc-month-view .rbc-day-bg {
+  background-color: transparent !important; /* Días del mes actual sin fondo */
+  cursor: default !important;
+}
+
+.calendar-module .rbc-month-view .rbc-day-bg.rbc-today {
+  background-color: #f8f8f8 !important; /* Fondo sutil para hoy */
+  color: #fe2d00;
+}
+
+/* Días del mes actual */
+.calendar-module .rbc-month-view .rbc-date-cell {
+  color: #333 !important; /* Números en gris oscuro */
+  cursor: default !important;
+  pointer-events: none !important; /* Desactiva clics */
+}
+
+.calendar-module .rbc-month-view .rbc-date-cell a {
+  color: #333 !important; /* Números en gris oscuro */
+  text-decoration: none !important;
+}
+
+/* Días de otros meses */
+.calendar-module .rbc-month-view .rbc-off-range-bg {
+  background-color: #e9ecef !important; /* Fondo gris claro para días de otros meses */
+}
+
+.calendar-module .rbc-month-view .rbc-off-range .rbc-date-cell {
+  color: #6c757d !important; /* Texto gris más claro para días de otros meses */
+}
+
+.calendar-module .rbc-month-view .rbc-off-range .rbc-date-cell a {
+  color: #6c757d !important; /* Enlaces en gris claro */
+}
+
+/* Eventos */
+.calendar-module .rbc-event {
+  padding: 2px 5px !important;
+}
+
+.calendar-module .rbc-row-segment {
+  max-height: 60px; /* Limita la altura para 3 eventos */
+  overflow: hidden;
+}

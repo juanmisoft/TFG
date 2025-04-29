@@ -1,0 +1,571 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #0056b3;
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  width: 250px;
+  z-index: 10;
+}
+
+.user-profile:hover .dropdown {
+  display: flex;
+}
+
+.dropdown button {
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+.change-password, .user-management {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.change-password input, .user-management input, .user-management select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-management ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.user-management li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.breadcrumbs {
+  padding: 10px 20px;
+  background-color: #e9ecef;
+}
+
+.breadcrumbs span {
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb-link {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.module {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.module h3 {
+  margin-top: 0;
+}
+
+.module ul {
+  list-style: none;
+  padding: 0;
+}
+
+.module li {
+  margin-bottom: 10px;
+}
+
+/* Ajustamos para excluir el calendario */
+.module:not(.calendar) button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.module:not(.calendar) button:hover {
+  background-color: #218838;
+}
+
+.module.dashboard {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.module.tasks {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.module.calendar {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.module.split-container {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.news-module, .promotions-module {
+  background-color: #f8f9fa;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.news-module h3, .promotions-module h3 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la lista de noticias en vista de manager */
+.news-list {
+  width: 100%;
+}
+
+.news-item {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.news-header strong {
+  font-size: 20px;
+  color: #333;
+}
+
+.news-date {
+  font-size: 15px;
+  color: #666;
+}
+
+.news-content {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.news-content a {
+  color: #007bff !important;
+  text-decoration: underline !important;
+}
+
+.news-content a:hover {
+  color: #0056b3 !important;
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #666;
+}
+
+.news-department {
+  font-style: italic;
+}
+
+.news-created-by {
+  font-style: italic;
+}
+
+.news-actions {
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* Tabla de Noticias para vista de trabajador */
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.news-table th, .news-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.news-table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para la lista de promociones */
+.promotions-list {
+  width: 100%;
+}
+
+.promotion-item {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.promotion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.promotion-header strong {
+  font-size: 20px;
+  color: #333;
+}
+
+.promotion-code {
+  font-size: 15px;
+  color: #666;
+}
+
+.promotion-dates {
+  display: flex;
+  justify-content: flex-start; /* Alineamos los elementos a la izquierda */
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #333;
+}
+
+.promotion-dates span:first-child {
+  margin-right: 15px; /* Añadimos un margen a la derecha del primer span para crear espacio */
+}
+
+.promotion-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.promotion-countdown {
+  color: inherit;
+}
+
+.promotion-ended {
+  color: #f44336;
+}
+
+.promotion-starting {
+  color: #4caf50;
+}
+
+.promotion-ending {
+  color: #ff9800;
+}
+
+.promotions-module button {
+  margin-top: 5px;
+}
+
+.kpi-worker .kpi-item {
+  margin-bottom: 20px;
+}
+
+.kpi-worker ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kpi-worker li {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  text-align: center;
+  color: black;
+  line-height: 20px;
+  transition: width 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.kpi-manager table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.kpi-manager th,
+.kpi-manager td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.kpi-manager th {
+  background-color: #f5f5f5;
+}
+
+.kpi-manager .progress-bar {
+  width: 80px;
+  height: 15px;
+  margin: 0 auto 5px auto;
+}
+
+.kpi-manager .progress {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.task-item.pending {
+  background-color: #f0f0f0;
+}
+
+.task-item.in_progress {
+  background-color: #fff3e0;
+}
+
+.task-item.completed {
+  background-color: #e0f7fa;
+}
+
+.task-item.approved {
+  background-color: #e8f5e9;
+}
+
+.task-item.rejected {
+  background-color: #ffebee;
+}
+
+.task-actions {
+  margin-top: 10px;
+}
+
+.task-actions button {
+  margin-right: 10px;
+}
+
+.status-icon {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.status-icon.approved {
+  color: #4caf50;
+}
+
+.status-icon.rejected {
+  color: #f44336;
+}
+
+.task-create form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-create input,
+.task-create textarea {
+  padding: 5px;
+}
+
+.task-create button {
+  align-self: flex-start;
+}
+
+.task-manage h4 {
+  margin-top: 20px;
+}
+
+.kpi-manager td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.kpi-manager span {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Estilos para la tabla de KPIs del trabajador */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.kpi-table th, .kpi-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.kpi-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+.kpi-table .progress-bar {
+  width: 120px;
+  height: 15px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.kpi-table .progress {
+  height: 100%;
+  text-align: center;
+  color: black;
+  line-height: 15px;
+  font-size: 12px;
+  transition: width 0.3s ease-in-out;
+}
+
+.kpi-table td:nth-child(2) { /* Columna de progreso */
+  width: 20%;
+}
+
+.kpi-table td:nth-child(3) { /* Columna de estado */
+  width: 35%;
+}
+
+.kpi-table td:nth-child(4) { /* Columna "¿Cómo voy?" */
+  width: 35%;
+}
+
+.kpi-table .objective {
+  font-weight: bold;
+}
+
+.kpi-table .achieved-green {
+  color: #4caf50; /* Verde para >100% */
+}
+
+.kpi-table .close-orange {
+  color: #ff9800; /* Naranja para >80% */
+}
+
+.kpi-table .below-red {
+  color: #f44336; /* Rojo para otros */
+}
