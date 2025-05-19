@@ -3,6 +3,10 @@
 Este proyecto es una intranet corporativa desarrollada como parte de un Trabajo Fin de Estudios de Ingeniería Informática.
 Su objetivo es proporcionar a las pequeñas y medianas empresas (pymes) una solución sencilla, eficiente y modular para la gestión de tareas, noticias, promociones, peticiones y objetivos comerciales.
 
+## Video demostrativo
+
+Puedes ver una demostración de la intranet en el siguiente enlace: [Video demostrativo](https://youtu.be/OKDcrnEHPjY)
+
 ## Tecnologías utilizadas
 
 - **Backend**: Django + Django REST Framework
