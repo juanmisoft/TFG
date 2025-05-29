@@ -3,7 +3,7 @@ from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'tu_clave_secreta_aqui'  # Cambia esto por una clave segura
+SECRET_KEY = 'tu_clave_secreta_aqui'  
 DEBUG = True
 
 # Ajustamos ALLOWED_HOSTS para incluir los dominios específicos de Cloudflare
@@ -31,7 +31,7 @@ AUTH_USER_MODEL = 'core.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Ahora debería funcionar con whitenoise instalado
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
