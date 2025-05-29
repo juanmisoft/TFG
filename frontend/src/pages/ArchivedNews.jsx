@@ -40,7 +40,7 @@ function ArchivedNews() {
     return date.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
   };
 
-  // Función para traducir el rol
+  /* Función para traducir el rol*/
   const translateRole = (role) => {
     switch (role) {
       case 'worker':
