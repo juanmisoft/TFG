@@ -10,8 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True, 'required': False},
             'photo': {'required': False},
-            'manager': {'required': False},
-            # Quitamos read_only de username, role, y department
+            'manager': {'required': False},            
         }
 
     def create(self, validated_data):
