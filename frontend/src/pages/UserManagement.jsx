@@ -81,6 +81,16 @@ function UserManagement() {
   };
 
   const handleDeleteUser = async (id) => {
+    // Mostrar mensaje de confirmación antes de eliminar
+    const confirmDelete = window.confirm(
+      `¿Estás seguro de que deseas eliminar al usuario con ID ${id}? Esta acción no se puede deshacer.`
+    );
+    
+    if (!confirmDelete) {
+      // Si el usuario selecciona "Cancelar", no se ejecuta la eliminación
+      return;
+    }
+
     const token = localStorage.getItem('accessToken');
     try {
       await axios.delete(`http://localhost:8001/api/users/${id}/`, {
@@ -115,6 +125,17 @@ function UserManagement() {
 
   const handleUpdateUser = async (e) => {
     e.preventDefault();
+
+    // Mostrar mensaje de confirmación antes de actualizar
+    const confirmUpdate = window.confirm(
+      `¿Estás seguro de que deseas actualizar los datos del usuario ${editUser.username}?`
+    );
+
+    if (!confirmUpdate) {
+      // Si el usuario selecciona "Cancelar", no se ejecuta la actualización
+      return;
+    }
+
     const token = localStorage.getItem('accessToken');
     const formData = new FormData();
     formData.append('username', editUser.username);
