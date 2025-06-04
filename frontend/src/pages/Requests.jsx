@@ -356,7 +356,7 @@ function Requests() {
 
       <div className="breadcrumbs">
         <span><Link to="/home" className="breadcrumb-link">Home</Link></span>
-        <span> &rarr; </span>
+        <span> → </span>
         <span>Peticiones</span>
       </div>
 
@@ -490,8 +490,7 @@ function Requests() {
               .filter(req => !req.isHidden)
               .map(req => (
                 <li key={req.id} className={req.status === 'approved' ? 'approved' : req.status === 'rejected' ? 'rejected' : req.status === 'modified' ? 'modified' : ''}>
-                  {currentUser?.role === 'manager' && `Solicitante: ${getUserFirstName(req.requester)} - `}
-                  {formatDate(req.date)} con {getUserFirstName(req.acceptor)} - {req.reason} - {req.status}
+                  Solicitante: {getUserFirstName(req.requester)} - {formatDate(req.date)} con {getUserFirstName(req.acceptor)} - {req.reason} - {req.status}
                   {req.status === 'rejected' && ` (Motivo: ${req.review_reason})`}
                   {req.status === 'modified' && ` (Modificado por: ${getUserFirstName(req.reviewed_by)}, Motivo: ${req.review_reason})`}
                   {(req.status === 'approved' || req.status === 'rejected') && (
